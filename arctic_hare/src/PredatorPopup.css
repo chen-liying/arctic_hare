@@ -1,0 +1,168 @@
+.predator-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.predator-popup {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  border: 4px solid #dc3545;
+  transform-origin: center center;
+  overflow: hidden;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.predator-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.predator-warning-icon {
+  color: #dc3545;
+  width: 30px;
+  height: 30px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.predator-popup h3 {
+  color: #dc3545;
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.predator-image-container {
+  width: 100%;
+  height: 180px;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.predator-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.predator-image:hover {
+  transform: scale(1.05);
+}
+
+.predator-popup-content {
+  margin: 15px 0;
+}
+
+.predator-popup-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.predator-popup-fullness {
+  font-weight: bold;
+  font-size: 1.3rem !important;
+  color: #dc3545 !important;
+  margin-top: 10px !important;
+}
+
+.predator-popup-close-btn {
+  background: linear-gradient(to bottom, #dc3545, #c82333);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.predator-popup-close-btn:hover {
+  background: linear-gradient(to bottom, #c82333, #bd2130);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.4);
+}
+
+@media (max-width: 600px) {
+  .predator-popup {
+    padding: 20px;
+    width: 85%;
+  }
+
+  .predator-popup h3 {
+    font-size: 1.8rem;
+  }
+
+  .predator-image-container {
+    height: 150px;
+  }
+
+  .predator-popup-content p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,64 @@
+.animal-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+  transition: all 0.2s ease;
+}
+
+.animal-icon:hover {
+  transform: scale(1.1);
+}
+
+.character-btn .animal-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.character-btn.selected .animal-icon {
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.6));
+}
+
+.player-token .animal-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.moving-token .animal-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.player-character .animal-icon {
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 1100px) {
+  .player-token .animal-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .player-character .animal-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .character-btn .animal-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .player-token .animal-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .player-character .animal-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
