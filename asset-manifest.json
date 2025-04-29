@@ -1,16 +1,30 @@
 {
   "files": {
-    "main.css": "/arctic_hare/static/css/main.f855e6bc.css",
-    "main.js": "/arctic_hare/static/js/main.6a0a99d8.js",
+    "main.css": "/arctic_hare/static/css/main.e539ddb6.css",
+    "main.js": "/arctic_hare/static/js/main.24bf69ca.js",
     "static/js/453.37dae035.chunk.js": "/arctic_hare/static/js/453.37dae035.chunk.js",
-    "static/media/logo.svg": "/arctic_hare/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/arctic_willow.png": "/arctic_hare/static/media/arctic_willow.f64e57f629e69c6ec2a9.png",
+    "static/media/arctic_hare_blue.png": "/arctic_hare/static/media/arctic_hare_blue.01e2ae79d49209a5b820.png",
+    "static/media/arctic_hare_purple.png": "/arctic_hare/static/media/arctic_hare_purple.3548ec82d05eeec5f68c.png",
+    "static/media/arctic_hare_yellow.png": "/arctic_hare/static/media/arctic_hare_yellow.a34204d2d9477fbc6c92.png",
+    "static/media/arctic_hare_pink.png": "/arctic_hare/static/media/arctic_hare_pink.e815eff391a5f5bde912.png",
+    "static/media/crowberry.png": "/arctic_hare/static/media/crowberry.5c126fa1a3a6fa392bc3.png",
+    "static/media/eagle.png": "/arctic_hare/static/media/eagle.d49bb9f197c754af3050.png",
+    "static/media/arctic_hare2.png": "/arctic_hare/static/media/arctic_hare2.6801d455803bd52bd151.png",
+    "static/media/polar_bear.png": "/arctic_hare/static/media/polar_bear.87cdc2de15bbb5d4249a.png",
+    "static/media/knowledge.png": "/arctic_hare/static/media/knowledge.99ec14721675e53b1036.png",
+    "static/media/snow_owl.png": "/arctic_hare/static/media/snow_owl.2d064051efbe98651ff3.png",
+    "static/media/arctic_fox.png": "/arctic_hare/static/media/arctic_fox.8588ca7f8798bc37d1c4.png",
+    "static/media/fun_fact.png": "/arctic_hare/static/media/fun_fact.3d82c2b6927eb3212e6f.png",
+    "static/media/arctic_hare.png": "/arctic_hare/static/media/arctic_hare.d9955b364228bd4eef07.png",
+    "static/media/moss.png": "/arctic_hare/static/media/moss.0f987b9cb1b1ba83e79f.png",
     "index.html": "/arctic_hare/index.html",
-    "main.f855e6bc.css.map": "/arctic_hare/static/css/main.f855e6bc.css.map",
-    "main.6a0a99d8.js.map": "/arctic_hare/static/js/main.6a0a99d8.js.map",
+    "main.e539ddb6.css.map": "/arctic_hare/static/css/main.e539ddb6.css.map",
+    "main.24bf69ca.js.map": "/arctic_hare/static/js/main.24bf69ca.js.map",
     "453.37dae035.chunk.js.map": "/arctic_hare/static/js/453.37dae035.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.6a0a99d8.js"
+    "static/css/main.e539ddb6.css",
+    "static/js/main.24bf69ca.js"
   ]
 }
