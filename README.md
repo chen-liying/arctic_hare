@@ -1,1 +1,0 @@
-# arctic_hare
