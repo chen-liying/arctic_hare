@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/arctic_hare/static/css/main.8e68c8f3.css",
-    "main.js": "/arctic_hare/static/js/main.43112ced.js",
-    "static/js/453.37dae035.chunk.js": "/arctic_hare/static/js/453.37dae035.chunk.js",
+    "main.js": "/arctic_hare/static/js/main.44323f3c.js",
+    "static/js/453.b92dd25b.chunk.js": "/arctic_hare/static/js/453.b92dd25b.chunk.js",
     "static/media/real_white_tailed_eagle.jpg": "/arctic_hare/static/media/real_white_tailed_eagle.ea59068478d3f0992788.jpg",
     "static/media/arctic_willow.png": "/arctic_hare/static/media/arctic_willow.f64e57f629e69c6ec2a9.png",
     "static/media/arctic_hare_blue.png": "/arctic_hare/static/media/arctic_hare_blue.01e2ae79d49209a5b820.png",
@@ -10,8 +10,8 @@
     "static/media/arctic_hare_yellow.png": "/arctic_hare/static/media/arctic_hare_yellow.a34204d2d9477fbc6c92.png",
     "static/media/arctic_hare_pink.png": "/arctic_hare/static/media/arctic_hare_pink.e815eff391a5f5bde912.png",
     "static/media/real_snowey_owl.jpg": "/arctic_hare/static/media/real_snowey_owl.5e58efbee994b4e19f5a.jpg",
+    "static/media/real_polar_bear.jpg": "/arctic_hare/static/media/real_polar_bear.fe08edcf77a5b6cf128b.jpg",
     "static/media/real_arctic_fox.png": "/arctic_hare/static/media/real_arctic_fox.1ace3fa4560bc1e65619.png",
-    "static/media/real_polar_bear.avif": "/arctic_hare/static/media/real_polar_bear.99459447ec5cd59164f4.avif",
     "static/media/crowberry.png": "/arctic_hare/static/media/crowberry.5c126fa1a3a6fa392bc3.png",
     "static/media/eagle.png": "/arctic_hare/static/media/eagle.d49bb9f197c754af3050.png",
     "static/media/arctic_hare2.png": "/arctic_hare/static/media/arctic_hare2.6801d455803bd52bd151.png",
@@ -24,11 +24,11 @@
     "static/media/moss.png": "/arctic_hare/static/media/moss.0f987b9cb1b1ba83e79f.png",
     "index.html": "/arctic_hare/index.html",
     "main.8e68c8f3.css.map": "/arctic_hare/static/css/main.8e68c8f3.css.map",
-    "main.43112ced.js.map": "/arctic_hare/static/js/main.43112ced.js.map",
-    "453.37dae035.chunk.js.map": "/arctic_hare/static/js/453.37dae035.chunk.js.map"
+    "main.44323f3c.js.map": "/arctic_hare/static/js/main.44323f3c.js.map",
+    "453.b92dd25b.chunk.js.map": "/arctic_hare/static/js/453.b92dd25b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e68c8f3.css",
-    "static/js/main.43112ced.js"
+    "static/js/main.44323f3c.js"
   ]
 }
