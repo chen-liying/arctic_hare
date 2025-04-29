@@ -592,7 +592,7 @@ const SnowshoeHareGame = () => {
 
   return (
     <div className="game-container">
-      <h1>Knowledge Fest - Snowshoe Hare</h1>
+      <h1>Knowledge Fest - Arctic Hares</h1>
 
       {/* Player Status Cards */}
       {gameStarted && showStatusCards && (
