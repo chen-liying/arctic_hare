@@ -3,7 +3,7 @@ import "./PredatorPopup.css";
 import { ExclamationTriangleIcon } from "./CustomIcons";
 
 const predatorImages = {
-  "Polar Bear": require("./animals/real/real_polar_bear.avif"),
+  "Polar Bear": require("./animals/real/real_polar_bear.jpg"),
   "Arctic Fox": require("./animals/real/real_arctic_fox.png"),
   "Snow Owl": require("./animals/real/real_snowey_owl.jpg"),
   "White-tailed Eagle": require("./animals/real/real_white_tailed_eagle.jpg"),
