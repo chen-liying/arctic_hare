@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/arctic_hare/static/css/main.84304063.css",
+    "main.css": "/arctic_hare/static/css/main.d1a3b105.css",
     "main.js": "/arctic_hare/static/js/main.dd756cc1.js",
     "static/js/453.b92dd25b.chunk.js": "/arctic_hare/static/js/453.b92dd25b.chunk.js",
     "static/media/real_white_tailed_eagle.jpg": "/arctic_hare/static/media/real_white_tailed_eagle.ea59068478d3f0992788.jpg",
@@ -32,12 +32,12 @@
     "static/media/arctic_hare_berry.jpg": "/arctic_hare/static/media/arctic_hare_berry.36347e8f0bce2e06793a.jpg",
     "static/media/moss.png": "/arctic_hare/static/media/moss.0f987b9cb1b1ba83e79f.png",
     "index.html": "/arctic_hare/index.html",
-    "main.84304063.css.map": "/arctic_hare/static/css/main.84304063.css.map",
+    "main.d1a3b105.css.map": "/arctic_hare/static/css/main.d1a3b105.css.map",
     "main.dd756cc1.js.map": "/arctic_hare/static/js/main.dd756cc1.js.map",
     "453.b92dd25b.chunk.js.map": "/arctic_hare/static/js/453.b92dd25b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84304063.css",
+    "static/css/main.d1a3b105.css",
     "static/js/main.dd756cc1.js"
   ]
 }
