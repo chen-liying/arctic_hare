@@ -58,22 +58,22 @@
 }
 
 .modal-icon {
-  font-size: 3rem; /* Reduced from 6rem to fit beside title */
+  font-size: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal-icon svg {
-  width: 60px; /* Reduced from 100px */
-  height: 60px; /* Reduced from 100px */
+  width: 60px;
+  height: 60px;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
 
 .modal-icon img {
-  width: 60px; /* Reduced from 100px */
+  width: 60px;
   height: auto;
-  max-height: 60px; /* Reduced from 100px */
+  max-height: 60px;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
 
@@ -168,10 +168,12 @@
 /* Add font imports for better typography */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Bubblegum+Sans&display=swap");
 
+/* Medium screens */
 @media (max-width: 600px) {
   .info-modal {
     padding: 20px;
     width: 85%;
+    border-width: 6px;
   }
 
   .header-container {
@@ -197,5 +199,99 @@
     width: 100%;
     padding: 12px;
     font-size: 1.3rem;
+  }
+
+  .modal-content-with-image {
+    padding: 15px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 375px) {
+  .info-modal {
+    padding: 15px;
+    width: 92%;
+    border-width: 4px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .header-container {
+    margin-bottom: 12px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .info-modal h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .modal-icon svg,
+  .modal-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-content-with-image {
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .modal-image-container {
+    max-width: 200px;
+    margin-bottom: 12px;
+    border-width: 3px;
+  }
+
+  .modal-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 0.3rem;
+  }
+
+  .close-btn {
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+  }
+}
+
+/* Ultra small screens */
+@media (max-width: 320px) {
+  .info-modal {
+    padding: 10px;
+    width: 95%;
+    border-width: 3px;
+  }
+
+  .info-modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-icon svg,
+  .modal-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .modal-content-with-image {
+    padding: 8px;
+  }
+
+  .modal-image-container {
+    max-width: 180px;
+    border-width: 2px;
+  }
+
+  .modal-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .close-btn {
+    padding: 8px;
+    font-size: 1rem;
   }
 }

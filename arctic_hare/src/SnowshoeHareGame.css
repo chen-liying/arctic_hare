@@ -1,16 +1,16 @@
 .game-container {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Use viewport height */
   margin: 0 auto;
-  padding: 10px 10px 10px 230px;
+  padding: 10px;
   text-align: center;
   font-family: "Nunito", Arial, sans-serif;
   position: relative;
-  border-radius: 20px;
   overflow: hidden;
+  max-width: none; /* Remove max-width constraint */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 h1 {
@@ -21,16 +21,18 @@ h1 {
 }
 
 .player-status-container {
-  position: fixed;
-  left: 20px;
-  top: 150px;
-  width: 200px;
+  position: static; /* Remove fixed positioning */
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 10px;
   z-index: 100;
 }
 
+/* Player status cards styling - consistent across all screen sizes */
 .player-status-card {
   background-color: #ffffff;
   border: 3px solid #ccc;
@@ -38,7 +40,9 @@ h1 {
   padding: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  width: 180px;
+  max-width: 180px;
+  min-width: 170px;
+  flex: 1;
 }
 
 .player-status-card.active-player {
@@ -493,7 +497,6 @@ h1 {
     height: 8px;
   }
 }
-
 @media (max-width: 480px) {
   .dice-container {
     width: 40px;
@@ -512,21 +515,19 @@ h1 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
   .dice-container {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 
   .dice-face {
-    border-width: 2px;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    border-width: 1.5px;
   }
 
   .dice-dot {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
 }
 
@@ -535,9 +536,18 @@ h1 {
 }
 
 .dice-dot {
-  position: absolute;
+  /* position: absolute;
   width: 12px;
   height: 12px;
+  background-color: #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); */
+
+  position: absolute;
+  width: 14%; /* Use percentage of container instead of fixed pixels */
+  height: 14%; /* Use percentage of container instead of fixed pixels */
+  min-width: 4px; /* Set minimum size for very small screens */
+  min-height: 4px; /* Set minimum size for very small screens */
   background-color: #333;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -625,12 +635,6 @@ h1 {
 }
 
 @media (max-width: 1100px) {
-  .game-container {
-    padding: 10px;
-    height: 100vh;
-    margin-left: 0;
-  }
-
   .player-status-container {
     position: static;
     width: 100%;
@@ -642,22 +646,47 @@ h1 {
   }
 
   .player-status-card {
-    max-width: 160px;
+    max-width: 180px;
+    min-width: 170px;
     flex: 1;
   }
+}
 
-  h1 {
-    font-size: 1.5rem;
+@media (max-width: 600px) {
+  .player-status-card {
+    max-width: 150px;
+    min-width: 140px;
+    padding: 12px;
+  }
+}
+
+/* Extra small screen adjustments */
+@media (max-width: 400px) {
+  .player-status-container {
+    gap: 8px;
   }
 
-  .character-icon-container svg {
-    width: 25px;
-    height: 25px;
+  .player-status-card {
+    max-width: 45%; /* Switch to percentage-based width */
+    min-width: 130px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .player-status-card {
+    padding: 8px;
+    max-width: 45%;
+    min-width: 120px;
   }
 
-  .player-token svg {
-    width: 25px;
-    height: 25px;
+  .player-character svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .player-name {
+    font-size: 0.9rem;
   }
 }
 

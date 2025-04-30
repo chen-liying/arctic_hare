@@ -1,3 +1,4 @@
+/* Base styles for predator popup */
 .predator-popup-overlay {
   position: fixed;
   top: 0;
@@ -15,17 +16,22 @@
 .predator-popup {
   background: linear-gradient(to bottom, #ffffff, #f8f9fa);
   border-radius: 20px;
-  padding: 25px;
+  padding: 20px;
   width: 90%;
-  max-width: 400px;
+  max-width: 350px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
   animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   border: 4px solid #dc3545;
   transform-origin: center center;
   overflow: hidden;
+  /* Add max-height to ensure it fits on small screens */
+  max-height: 90vh;
+  overflow-y: auto; /* Allow scrolling if content is too tall */
+  box-sizing: border-box; /* Include padding and border in sizing */
 }
 
+/* Animation keyframes */
 @keyframes shake {
   0%,
   100% {
@@ -55,18 +61,19 @@
   }
 }
 
+/* Header section styling */
 .predator-popup-header {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .predator-warning-icon {
   color: #dc3545;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   animation: pulse 1.5s infinite;
 }
 
@@ -84,17 +91,18 @@
 
 .predator-popup h3 {
   color: #dc3545;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Image container that's responsive */
 .predator-image-container {
   width: 100%;
-  height: 300px; /* Fixed at max height of 300px as requested */
-  max-height: 300px;
-  margin: 15px auto;
+  height: 250px; /* Reducing default height */
+  max-height: 30vh; /* Use viewport height to scale on small screens */
+  margin: 12px auto;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -107,12 +115,11 @@
 .predator-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Makes image cover the entire container */
-  object-position: center; /* Centers the image */
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
-/* Added placeholder styling */
 .predator-image-placeholder {
   width: 100%;
   height: 100%;
@@ -121,6 +128,7 @@
   justify-content: center;
   background-color: #f1f1f1;
   color: #666;
+  font-size: 0.9rem;
 }
 
 .predator-image.loaded {
@@ -136,12 +144,13 @@
   }
 }
 
+/* Content styling */
 .predator-popup-content {
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .predator-popup-content p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333;
   margin: 8px 0;
   line-height: 1.4;
@@ -149,19 +158,20 @@
 
 .predator-popup-energy {
   font-weight: bold;
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
   color: #dc3545 !important;
-  margin-top: 10px !important;
+  margin-top: 8px !important;
 }
 
+/* Button styling */
 .predator-popup-close-btn {
   background: linear-gradient(to bottom, #dc3545, #c82333);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 50px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 10px;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
@@ -170,25 +180,108 @@
 
 .predator-popup-close-btn:hover {
   background: linear-gradient(to bottom, #c82333, #bd2130);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(220, 53, 69, 0.4);
 }
 
+/* Medium screens */
 @media (max-width: 600px) {
   .predator-popup {
-    padding: 20px;
-    width: 85%;
+    padding: 15px;
+    width: 90%;
+    max-width: 320px;
+    border-width: 3px;
   }
 
   .predator-popup h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .predator-image-container {
-    height: 250px; /* Slightly smaller on mobile */
+    height: 200px;
+    max-height: 25vh;
   }
 
   .predator-popup-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .predator-popup-energy {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .predator-popup {
+    padding: 12px 10px;
+    width: 85%;
+    max-width: 260px; /* Reduced from 300px */
+    border-width: 2px;
+    border-radius: 15px;
+  }
+
+  .predator-image-container {
+    height: 150px; /* Shorter height */
+    max-height: 22vh;
+  }
+}
+
+/* Extra small screens - ultra narrow */
+@media (max-width: 320px) {
+  .predator-popup {
+    padding: 8px 6px; /* Minimal padding */
+    width: 90%;
+    max-width: 230px; /* Very narrow */
+    border-width: 1px;
+    border-radius: 10px;
+  }
+
+  .predator-popup-header {
+    margin-bottom: 6px;
+  }
+
+  .predator-warning-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .predator-popup h3 {
+    font-size: 1.1rem;
+  }
+
+  .predator-image-container {
+    height: 120px;
+    max-height: 18vh;
+    margin: 6px auto;
+    border-radius: 6px;
+  }
+
+  .predator-popup-content {
+    margin: 6px 0;
+  }
+
+  .predator-popup-energy {
+    font-size: 0.9rem !important;
+    margin-top: 4px !important;
+  }
+
+  .predator-popup-close-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    border-radius: 15px;
+  }
+}
+
+/* Landscape mode on very small screens */
+@media (max-height: 320px) and (min-width: 480px) {
+  .predator-popup {
+    max-height: 95vh;
+    padding: 10px 8px;
+  }
+
+  .predator-image-container {
+    height: 100px;
+    max-height: 40vh;
   }
 }
