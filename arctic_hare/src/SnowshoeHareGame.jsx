@@ -18,6 +18,7 @@ import {
 import { ArcticHareData } from "./ArcticHareData";
 import ImageInfoModal from "./ImageInfoModal";
 import PredatorPopup from "./PredatorPopup";
+import FoodPopup from "./FoodPopup";
 
 const SnowshoeHareGame = () => {
   // Game state
@@ -49,7 +50,7 @@ const SnowshoeHareGame = () => {
     "Select your characters and start the game!"
   );
   const [movingPlayer, setMovingPlayer] = useState(null);
-  const [diceValue, setDiceValue] = useState(null);
+  const [diceValue, setDiceValue] = useState(6); // Initialize with 6 to show dice at start
   const [diceRolling, setDiceRolling] = useState(false);
   const [diceFaces, setDiceFaces] = useState([]);
   const [showStatusCards, setShowStatusCards] = useState(true);
@@ -67,6 +68,10 @@ const SnowshoeHareGame = () => {
   // Enhanced predator popup state
   const [showPredatorPopup, setShowPredatorPopup] = useState(false);
   const [predatorType, setPredatorType] = useState("");
+
+  // Food popup state
+  const [showFoodPopup, setShowFoodPopup] = useState(false);
+  const [foodType, setFoodType] = useState("");
 
   // Constants
   const TOTAL_POSITIONS = 20;
@@ -153,6 +158,19 @@ const SnowshoeHareGame = () => {
       // Show enhanced predator popup
       setPredatorType(getPredatorName(spaceIcon));
       setShowPredatorPopup(true);
+    } else if (spaceType === "food") {
+      // Determine food type and show food popup
+      let foodType = "food";
+      if (spaceIcon.type === BerriesIcon) {
+        foodType = "berry";
+      } else if (spaceIcon.type === MossIcon) {
+        foodType = "moss";
+      } else if (spaceIcon.type === ArcticWillowIcon) {
+        foodType = "arctic_willow";
+      }
+
+      setFoodType(foodType);
+      setShowFoodPopup(true);
     }
   };
 
@@ -316,6 +334,9 @@ const SnowshoeHareGame = () => {
             }
 
             spaceMessage = `${currentPlayerAnimal} landed on a ${foodType} space and is now more full!`;
+
+            // Show food popup
+            handleSpecialSpace("food", specialSpace.icon);
           } else if (specialSpace.type === "knowledge") {
             updatedKnowledge = 1; // Gain 1 knowledge point
             spaceMessage = `${currentPlayerAnimal} landed on a knowledge space and learned something new! Lost 1 energy point.`;
@@ -383,16 +404,17 @@ const SnowshoeHareGame = () => {
           return;
         }
 
-        // If there's no predator or other popup, proceed to next player
+        // If there's no predator, food, or other popup, proceed to next player
         if (
           !specialSpace ||
           (specialSpace.type !== "predator" &&
             specialSpace.type !== "funFact" &&
-            specialSpace.type !== "knowledge")
+            specialSpace.type !== "knowledge" &&
+            specialSpace.type !== "food")
         ) {
           proceedToNextPlayer(updatedPlayers);
         }
-        // Otherwise, for predator encounters, wait for popup to be closed
+        // Otherwise, for predator/food encounters, wait for popup to be closed
         // The next player turn will be triggered from the popup's onClose handler
 
         return;
@@ -451,6 +473,12 @@ const SnowshoeHareGame = () => {
     proceedToNextPlayer(players);
   };
 
+  // Handle the completion of the food popup
+  const handleFoodPopupClose = () => {
+    setShowFoodPopup(false);
+    proceedToNextPlayer(players);
+  };
+
   // Restart game when player chooses to play again
   const restartGame = () => {
     // Reset all game state
@@ -480,7 +508,7 @@ const SnowshoeHareGame = () => {
     setGameStarted(false);
     setMessage("Select your characters and start the game!");
     setMovingPlayer(null);
-    setDiceValue(null);
+    setDiceValue(6); // Keep showing the dice at start
     setDiceRolling(false);
     setDiceFaces([]);
     setTurnStarted(false);
@@ -488,6 +516,7 @@ const SnowshoeHareGame = () => {
     setGameOverPlayer(null);
     setShowInfoModal(false);
     setShowPredatorPopup(false);
+    setShowFoodPopup(false);
     setButtonsEnabled(true);
   };
 
@@ -804,9 +833,9 @@ const SnowshoeHareGame = () => {
                 )}
 
                 {/* Dice in center - only show when in center region */}
-                {isCenterRegion && row === 2 && col === 2 && diceValue && (
+                {isCenterRegion && row === 2 && col === 2 && (
                   <div className="dice-container">
-                    {renderDiceFace(diceValue)}
+                    {diceValue ? renderDiceFace(diceValue) : renderDiceFace(1)}
                   </div>
                 )}
               </div>
@@ -1020,6 +1049,13 @@ const SnowshoeHareGame = () => {
         isVisible={showPredatorPopup}
         predatorType={predatorType}
         onClose={handlePredatorPopupClose}
+      />
+
+      {/* Food Popup */}
+      <FoodPopup
+        isVisible={showFoodPopup}
+        foodType={foodType}
+        onClose={handleFoodPopupClose}
       />
 
       {/* Info Modal for Fun Facts and Knowledge */}

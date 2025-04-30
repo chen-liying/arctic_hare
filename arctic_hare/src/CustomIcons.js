@@ -46,28 +46,62 @@ export const ArcticWillowIcon = () => (
   />
 );
 
-export const KnowledgeIcon = () => (
+// Default sized KnowledgeIcon for regular UI elements
+export const KnowledgeIcon = ({ className, style }) => (
   <img
     src={KnowledgeImage}
     alt="Knowledge"
+    className={className}
     style={{
       width: "24px", // Small enough to fit in the space
       height: "auto", // Maintain aspect ratio
       maxHeight: "24px",
       verticalAlign: "middle", // Better alignment with other icons
+      ...style,
     }}
   />
 );
 
-export const FunFactIcon = () => (
+// Default sized FunFactIcon for regular UI elements
+export const FunFactIcon = ({ className, style }) => (
   <img
     src={FunFactImage}
     alt="Fun Fact"
+    className={className}
     style={{
       width: "24px", // Small enough to fit in the space
       height: "auto", // Maintain aspect ratio
       maxHeight: "24px",
       verticalAlign: "middle", // Better alignment with other icons
+      ...style,
+    }}
+  />
+);
+
+// Larger KnowledgeIcon for modal usage
+export const LargeKnowledgeIcon = () => (
+  <img
+    src={KnowledgeImage}
+    alt="Knowledge"
+    style={{
+      width: "60px", // Larger size for modal
+      height: "auto",
+      maxHeight: "60px",
+      filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2))",
+    }}
+  />
+);
+
+// Larger FunFactIcon for modal usage
+export const LargeFunFactIcon = () => (
+  <img
+    src={FunFactImage}
+    alt="Fun Fact"
+    style={{
+      width: "60px", // Larger size for modal
+      height: "auto",
+      maxHeight: "60px",
+      filter: "drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2))",
     }}
   />
 );
@@ -98,3 +132,23 @@ export const ExclamationTriangleIcon = ({ className }) => {
     </svg>
   );
 };
+
+export const SmileIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+  </svg>
+);

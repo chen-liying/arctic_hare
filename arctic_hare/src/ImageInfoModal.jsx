@@ -1,6 +1,6 @@
 import React from "react";
 import "./ImageInfoModal.css";
-import { FunFactIcon, KnowledgeIcon } from "./CustomIcons";
+import { LargeFunFactIcon, LargeKnowledgeIcon } from "./CustomIcons";
 
 const ImageInfoModal = ({ isOpen, onClose, type, content }) => {
   if (!isOpen) return null;
@@ -10,11 +10,11 @@ const ImageInfoModal = ({ isOpen, onClose, type, content }) => {
   let borderColor = "";
 
   if (type === "funFact") {
-    icon = <FunFactIcon />;
+    icon = <LargeFunFactIcon />;
     title = "Cool Arctic Hare Fact!";
     borderColor = "#ffc107"; // Yellow
   } else if (type === "knowledge") {
-    icon = <KnowledgeIcon />;
+    icon = <LargeKnowledgeIcon />;
     title = "Learn About Arctic Hares!";
     borderColor = "#17a2b8"; // Teal
   }
@@ -26,8 +26,10 @@ const ImageInfoModal = ({ isOpen, onClose, type, content }) => {
         style={{ borderColor }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="modal-icon">{icon}</div>
-        <h2>{title}</h2>
+        <div className="header-container">
+          <div className="modal-icon">{icon}</div>
+          <h2>{title}</h2>
+        </div>
 
         <div className="modal-content-with-image">
           <div className="modal-image-container">
