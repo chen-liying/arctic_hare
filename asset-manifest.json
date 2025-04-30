@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/arctic_hare/static/css/main.8e68c8f3.css",
-    "main.js": "/arctic_hare/static/js/main.44323f3c.js",
+    "main.css": "/arctic_hare/static/css/main.84304063.css",
+    "main.js": "/arctic_hare/static/js/main.dd756cc1.js",
     "static/js/453.b92dd25b.chunk.js": "/arctic_hare/static/js/453.b92dd25b.chunk.js",
     "static/media/real_white_tailed_eagle.jpg": "/arctic_hare/static/media/real_white_tailed_eagle.ea59068478d3f0992788.jpg",
     "static/media/arctic_willow.png": "/arctic_hare/static/media/arctic_willow.f64e57f629e69c6ec2a9.png",
+    "static/media/hare_with_arctic_willow.jpg": "/arctic_hare/static/media/hare_with_arctic_willow.a168e5719317705e38ca.jpg",
+    "static/media/arctic_hare_winter_summer.jpeg": "/arctic_hare/static/media/arctic_hare_winter_summer.aba50365556f6425caa2.jpeg",
+    "static/media/arctic_hare_range.jpg": "/arctic_hare/static/media/arctic_hare_range.1d776e677c2f4d1ce84e.jpg",
     "static/media/arctic_hare_blue.png": "/arctic_hare/static/media/arctic_hare_blue.01e2ae79d49209a5b820.png",
     "static/media/arctic_hare_purple.png": "/arctic_hare/static/media/arctic_hare_purple.3548ec82d05eeec5f68c.png",
     "static/media/arctic_hare_yellow.png": "/arctic_hare/static/media/arctic_hare_yellow.a34204d2d9477fbc6c92.png",
     "static/media/arctic_hare_pink.png": "/arctic_hare/static/media/arctic_hare_pink.e815eff391a5f5bde912.png",
     "static/media/real_snowey_owl.jpg": "/arctic_hare/static/media/real_snowey_owl.5e58efbee994b4e19f5a.jpg",
+    "static/media/arctic_hare.jpg": "/arctic_hare/static/media/arctic_hare.44e44a81969f796cf9d5.jpg",
     "static/media/real_polar_bear.jpg": "/arctic_hare/static/media/real_polar_bear.fe08edcf77a5b6cf128b.jpg",
     "static/media/real_arctic_fox.png": "/arctic_hare/static/media/real_arctic_fox.1ace3fa4560bc1e65619.png",
+    "static/media/arctic_hare_moss.jpg": "/arctic_hare/static/media/arctic_hare_moss.0e4b007fe863617ef6ca.jpg",
+    "static/media/arctic_hare_with_babies.jpg": "/arctic_hare/static/media/arctic_hare_with_babies.3b864c7e20a408ae22b1.jpg",
     "static/media/crowberry.png": "/arctic_hare/static/media/crowberry.5c126fa1a3a6fa392bc3.png",
+    "static/media/hare_vs_rabbit-min.jpg": "/arctic_hare/static/media/hare_vs_rabbit-min.0aa5befd7a55012bc6d6.jpg",
     "static/media/eagle.png": "/arctic_hare/static/media/eagle.d49bb9f197c754af3050.png",
+    "static/media/adult_arctic_hare.jpg": "/arctic_hare/static/media/adult_arctic_hare.f758934bade0a9c89859.jpg",
     "static/media/arctic_hare2.png": "/arctic_hare/static/media/arctic_hare2.6801d455803bd52bd151.png",
     "static/media/polar_bear.png": "/arctic_hare/static/media/polar_bear.87cdc2de15bbb5d4249a.png",
     "static/media/knowledge.png": "/arctic_hare/static/media/knowledge.99ec14721675e53b1036.png",
@@ -21,14 +29,15 @@
     "static/media/arctic_fox.png": "/arctic_hare/static/media/arctic_fox.8588ca7f8798bc37d1c4.png",
     "static/media/fun_fact.png": "/arctic_hare/static/media/fun_fact.3d82c2b6927eb3212e6f.png",
     "static/media/arctic_hare.png": "/arctic_hare/static/media/arctic_hare.d9955b364228bd4eef07.png",
+    "static/media/arctic_hare_berry.jpg": "/arctic_hare/static/media/arctic_hare_berry.36347e8f0bce2e06793a.jpg",
     "static/media/moss.png": "/arctic_hare/static/media/moss.0f987b9cb1b1ba83e79f.png",
     "index.html": "/arctic_hare/index.html",
-    "main.8e68c8f3.css.map": "/arctic_hare/static/css/main.8e68c8f3.css.map",
-    "main.44323f3c.js.map": "/arctic_hare/static/js/main.44323f3c.js.map",
+    "main.84304063.css.map": "/arctic_hare/static/css/main.84304063.css.map",
+    "main.dd756cc1.js.map": "/arctic_hare/static/js/main.dd756cc1.js.map",
     "453.b92dd25b.chunk.js.map": "/arctic_hare/static/js/453.b92dd25b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e68c8f3.css",
-    "static/js/main.44323f3c.js"
+    "static/css/main.84304063.css",
+    "static/js/main.dd756cc1.js"
   ]
 }
