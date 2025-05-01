@@ -858,125 +858,101 @@ const SnowshoeHareGame = () => {
             >
               {movingPlayer.currentStep >= 0 &&
               movingPlayer.currentStep < movingPlayer.moveSteps.length ? (
-                // Show animation token during movement
-                <span
+                // Show animation token during movement - FIXED version
+                <div
                   className="player-token moving-token"
                   style={{
                     position: "absolute",
                     fontSize: "1.5rem",
-                    top:
-                      movingPlayer.currentStep === 0
-                        ? `${
-                            (getPositionCoordinates(movingPlayer.oldPosition)
-                              .row *
-                              100) /
-                              6 +
-                            8
-                          }%`
-                        : `${
-                            (getPositionCoordinates(
-                              movingPlayer.moveSteps[
-                                movingPlayer.currentStep - 1
-                              ]
-                            ).row *
-                              100) /
-                              6 +
-                            8
-                          }%`,
-                    left:
-                      movingPlayer.currentStep === 0
-                        ? `${
-                            (getPositionCoordinates(movingPlayer.oldPosition)
-                              .col *
-                              100) /
-                              6 +
-                            8
-                          }%`
-                        : `${
-                            (getPositionCoordinates(
-                              movingPlayer.moveSteps[
-                                movingPlayer.currentStep - 1
-                              ]
-                            ).col *
-                              100) /
-                              6 +
-                            8
-                          }%`,
-                    transform: `translate(
-                      ${
+                    // Base position calculation - adjusted for first step
+                    top: `calc(${
+                      (getPositionCoordinates(
                         movingPlayer.currentStep === 0
-                          ? ((getPositionCoordinates(movingPlayer.moveSteps[0])
-                              .col -
-                              getPositionCoordinates(movingPlayer.oldPosition)
-                                .col) *
-                              100) /
-                            6
-                          : ((getPositionCoordinates(
-                              movingPlayer.moveSteps[movingPlayer.currentStep]
-                            ).col -
-                              getPositionCoordinates(
-                                movingPlayer.moveSteps[
-                                  movingPlayer.currentStep - 1
-                                ]
-                              ).col) *
-                              100) /
-                            6
-                      }%, 
-                      ${
+                          ? movingPlayer.oldPosition
+                          : movingPlayer.moveSteps[movingPlayer.currentStep - 1]
+                      ).row *
+                        100) /
+                        6 +
+                      8.33
+                    }%)`,
+                    left: `calc(${
+                      (getPositionCoordinates(
                         movingPlayer.currentStep === 0
-                          ? ((getPositionCoordinates(movingPlayer.moveSteps[0])
-                              .row -
-                              getPositionCoordinates(movingPlayer.oldPosition)
-                                .row) *
-                              100) /
-                            6
-                          : ((getPositionCoordinates(
-                              movingPlayer.moveSteps[movingPlayer.currentStep]
-                            ).row -
-                              getPositionCoordinates(
-                                movingPlayer.moveSteps[
-                                  movingPlayer.currentStep - 1
-                                ]
-                              ).row) *
-                              100) /
-                            6
-                      }%
-                    )`,
-                    transition: "transform 0.25s ease-out",
-                    animation: "hop 0.3s ease-out",
+                          ? movingPlayer.oldPosition
+                          : movingPlayer.moveSteps[movingPlayer.currentStep - 1]
+                      ).col *
+                        100) /
+                        6 +
+                      8.33
+                    }%)`,
+                    // Translation calculation - now consistent for all steps
+                    transform: `translate(-50%, -50%) translate(
+              ${
+                ((getPositionCoordinates(
+                  movingPlayer.currentStep === 0
+                    ? movingPlayer.moveSteps[0]
+                    : movingPlayer.moveSteps[movingPlayer.currentStep]
+                ).col -
+                  getPositionCoordinates(
+                    movingPlayer.currentStep === 0
+                      ? movingPlayer.oldPosition
+                      : movingPlayer.moveSteps[movingPlayer.currentStep - 1]
+                  ).col) *
+                  100) /
+                6
+              }%, 
+              ${
+                ((getPositionCoordinates(
+                  movingPlayer.currentStep === 0
+                    ? movingPlayer.moveSteps[0]
+                    : movingPlayer.moveSteps[movingPlayer.currentStep]
+                ).row -
+                  getPositionCoordinates(
+                    movingPlayer.currentStep === 0
+                      ? movingPlayer.oldPosition
+                      : movingPlayer.moveSteps[movingPlayer.currentStep - 1]
+                  ).row) *
+                  100) /
+                6
+              }%
+            )`,
+                    transition: "transform 0.5s ease-out",
+                    animation: "hop 0.5s ease-out",
                     zIndex: 200,
                   }}
                 >
                   {renderCharacter(
                     players.find((p) => p.id === movingPlayer.playerId)
                   )}
-                </span>
+                </div>
               ) : (
                 // Show token at final position after movement completes
-                <span
+                <div
                   className="player-token"
                   style={{
                     position: "absolute",
                     fontSize: "1.5rem",
-                    top: `${
+                    // Position at center of the final space
+                    top: `calc(${
                       (getPositionCoordinates(movingPlayer.newPosition).row *
                         100) /
                         6 +
-                      8
-                    }%`,
-                    left: `${
+                      8.33
+                    }%)`,
+                    left: `calc(${
                       (getPositionCoordinates(movingPlayer.newPosition).col *
                         100) /
                         6 +
-                      8
-                    }%`,
+                      8.33
+                    }%)`,
+                    transform: "translate(-50%, -50%)",
                     zIndex: 200,
                   }}
                 >
                   {renderCharacter(
                     players.find((p) => p.id === movingPlayer.playerId)
                   )}
-                </span>
+                </div>
               )}
             </div>
           )}

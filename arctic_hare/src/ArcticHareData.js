@@ -41,13 +41,13 @@ export const ArcticHareData = {
       alt: "Arctic hare appearance",
     },
     {
-      text: "Arctic hares are herbivores. They eat plants like root of arctic willow, moss, berries.",
-      image: `${imagePath}arctic-hare-eating.jpg`,
+      text: "Arctic hares are herbivores. They eat plants like root of arctic willow, moss, berries and woody plants",
+      image: require("./app_images/info/arctic_hare_food.png"),
       alt: "Arctic hare eating plants",
     },
     {
-      text: "Foxes, wolves, owls, and polar bears try to catch arctic hares.",
-      image: `${imagePath}arctic-fox-predator.jpg`,
+      text: "Predators: Foxes, wolves, owls, and polar bears try to catch arctic hares.",
+      image: require("./app_images/info/arctic_hare_predators.jpg"),
       alt: "Arctic fox hunting",
     },
     {

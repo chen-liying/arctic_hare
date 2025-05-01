@@ -42,6 +42,7 @@ const ImageInfoModal = ({ isOpen, onClose, type, content }) => {
           <div className="modal-text">{content.text}</div>
         </div>
 
+        {/* Fixed button - ensuring it's always visible */}
         <button className="close-btn" onClick={onClose}>
           Continue Play!
         </button>
