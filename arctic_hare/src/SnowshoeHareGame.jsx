@@ -548,15 +548,6 @@ const SnowshoeHareGame = () => {
     return (energy / MAX_ENERGY) * 100;
   };
 
-  // Get energy status text based on energy level
-  const getEnergyStatus = (energy) => {
-    if (energy === 0) return "Starving";
-    if (energy < 5) return "Very Hungry";
-    if (energy < 10) return "Hungry";
-    if (energy < 15) return "Satisfied";
-    return "";
-  };
-
   // Determine color class for energy bar based on level
   const getEnergyColorClass = (energy) => {
     if (energy < 5) return "energy-low";
@@ -646,7 +637,7 @@ const SnowshoeHareGame = () => {
               {/* Energy bar */}
               <div className="energy-container">
                 <div className="energy-label">
-                  <span>Energy: {getEnergyStatus(player.energy)}</span>
+                  <span>Energy: </span>
                   <span className="energy-value">
                     {player.energy}/{MAX_ENERGY}
                   </span>
