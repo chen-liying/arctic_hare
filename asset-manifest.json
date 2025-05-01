@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/arctic_hare/static/css/main.8746e73e.css",
-    "main.js": "/arctic_hare/static/js/main.dd756cc1.js",
+    "main.css": "/arctic_hare/static/css/main.84a1cea5.css",
+    "main.js": "/arctic_hare/static/js/main.57d2b083.js",
     "static/js/453.b92dd25b.chunk.js": "/arctic_hare/static/js/453.b92dd25b.chunk.js",
+    "static/media/arctic_hare_food.png": "/arctic_hare/static/media/arctic_hare_food.296eb060fc3c73bb18cb.png",
+    "static/media/arctic_hare_predators.jpg": "/arctic_hare/static/media/arctic_hare_predators.c5f55f577d057cd1ddaa.jpg",
     "static/media/real_white_tailed_eagle.jpg": "/arctic_hare/static/media/real_white_tailed_eagle.ea59068478d3f0992788.jpg",
     "static/media/arctic_willow.png": "/arctic_hare/static/media/arctic_willow.f64e57f629e69c6ec2a9.png",
     "static/media/hare_with_arctic_willow.jpg": "/arctic_hare/static/media/hare_with_arctic_willow.a168e5719317705e38ca.jpg",
@@ -32,12 +34,12 @@
     "static/media/arctic_hare_berry.jpg": "/arctic_hare/static/media/arctic_hare_berry.36347e8f0bce2e06793a.jpg",
     "static/media/moss.png": "/arctic_hare/static/media/moss.0f987b9cb1b1ba83e79f.png",
     "index.html": "/arctic_hare/index.html",
-    "main.8746e73e.css.map": "/arctic_hare/static/css/main.8746e73e.css.map",
-    "main.dd756cc1.js.map": "/arctic_hare/static/js/main.dd756cc1.js.map",
+    "main.84a1cea5.css.map": "/arctic_hare/static/css/main.84a1cea5.css.map",
+    "main.57d2b083.js.map": "/arctic_hare/static/js/main.57d2b083.js.map",
     "453.b92dd25b.chunk.js.map": "/arctic_hare/static/js/453.b92dd25b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8746e73e.css",
-    "static/js/main.dd756cc1.js"
+    "static/css/main.84a1cea5.css",
+    "static/js/main.57d2b083.js"
   ]
 }
