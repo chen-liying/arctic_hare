@@ -3,12 +3,12 @@
   "name": "Arctic Hares - Knowledge Fest",
   "icons": [
     {
-      "src": "arctic-hare-logo.png",
+      "src": "kf-arctic-hare-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "arctic-hare-logo.png",
+      "src": "kf-arctic-hare-logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

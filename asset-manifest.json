@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/arctic_hare/static/css/main.84a1cea5.css",
-    "main.js": "/arctic_hare/static/js/main.57d2b083.js",
+    "main.js": "/arctic_hare/static/js/main.25572733.js",
     "static/js/453.b92dd25b.chunk.js": "/arctic_hare/static/js/453.b92dd25b.chunk.js",
     "static/media/arctic_hare_food.png": "/arctic_hare/static/media/arctic_hare_food.296eb060fc3c73bb18cb.png",
     "static/media/arctic_hare_predators.jpg": "/arctic_hare/static/media/arctic_hare_predators.c5f55f577d057cd1ddaa.jpg",
@@ -35,11 +35,11 @@
     "static/media/moss.png": "/arctic_hare/static/media/moss.0f987b9cb1b1ba83e79f.png",
     "index.html": "/arctic_hare/index.html",
     "main.84a1cea5.css.map": "/arctic_hare/static/css/main.84a1cea5.css.map",
-    "main.57d2b083.js.map": "/arctic_hare/static/js/main.57d2b083.js.map",
+    "main.25572733.js.map": "/arctic_hare/static/js/main.25572733.js.map",
     "453.b92dd25b.chunk.js.map": "/arctic_hare/static/js/453.b92dd25b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84a1cea5.css",
-    "static/js/main.57d2b083.js"
+    "static/js/main.25572733.js"
   ]
 }
