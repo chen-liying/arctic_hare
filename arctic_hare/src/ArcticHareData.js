@@ -8,16 +8,6 @@ export const ArcticHareData = {
       alt: "Baby Arctic hares with their mother",
     },
     {
-      text: "Arctic hares typically have 2-8 leverets at a time.",
-      image: require("./app_images/info/arctic_hare_with_babies.jpg"),
-      alt: "Arctic hares gestation period",
-    },
-    {
-      text: "Arctic hares can live up to 5 years in the wild.",
-      image: require("./app_images/info/adult_arctic_hare.jpg"),
-      alt: "Close-up of Arctic hare's thick fur",
-    },
-    {
       text: "Arctic hares can hop as fast as a car and jump over your head!",
       image: require("./app_images/info/arctic_hare_run.jpeg"),
       alt: "Arctic hare hopping through snow",
@@ -26,6 +16,11 @@ export const ArcticHareData = {
       text: "Arctic hares are white in winter and brown in summer to hide better!",
       image: require("./app_images/info/arctic_hare_winter_summer.jpeg"),
       alt: "Arctic hare in white winter coat",
+    },
+    {
+      text: "Arctic hares are bigger than rabbits and have longer legs to hop better in snow!",
+      image: require("./app_images/info/hare_vs_rabbit-min.jpg"),
+      alt: "Arctic hare compared to a rabbit",
     },
   ],
 
@@ -51,9 +46,14 @@ export const ArcticHareData = {
       alt: "Arctic fox hunting",
     },
     {
-      text: "Arctic hares are bigger than rabbits and have longer legs to hop better in snow!",
-      image: require("./app_images/info/hare_vs_rabbit-min.jpg"),
-      alt: "Arctic hare compared to a rabbit",
+      text: "Arctic hares typically have 2-8 leverets at a time.",
+      image: require("./app_images/info/arctic_hare_with_babies.jpg"),
+      alt: "Arctic hares gestation period",
+    },
+    {
+      text: "Arctic hares can live up to 5 years in the wild.",
+      image: require("./app_images/info/adult_arctic_hare.jpg"),
+      alt: "Close-up of Arctic hare's thick fur",
     },
   ],
 };
